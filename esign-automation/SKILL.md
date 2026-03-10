@@ -9,7 +9,6 @@ homepage: https://github.com/esign-cn-open-source/skills
 
 This skill provides automation capabilities for the eSignGlobal electronic signature platform.
 It enables AI agents to automate document signing workflows and integrate with eSignGlobal APIs. 
-This skill is maintained by the eSignGlobal team and is intended for safe automation of contract signing workflows.
 
 ## Best For
 
@@ -37,8 +36,10 @@ The skill runs the following steps:
 ## Requirements
 
 - Node.js 18 or later
-- An eSignGlobal application key provided through an environment variable
-
+- A TypeScript runner:
+  - recommended: `npx tsx`
+  - optional: `npx ts-node`
+- An eSignGlobal application key exposed as `ESIGNGLOBAL_APIKEY`
 
 ## Required Configuration
 
@@ -52,15 +53,11 @@ If the user does not already have an app key, direct them to:
 2. Open `Settings -> Integration -> Apps`
 3. Create an application and copy the generated API Key
 
-This credential is used only to authenticate requests to the official eSignGlobal API.
-
-Do not place credentials inside prompts, source code, or logs.
-
 ## Required Inputs
 
 To send an envelope, collect:
 
-- `filePath`: Absolute path to the document that should be sent for signature.
+- `filePath`: absolute path to the local file
 - `signers`: JSON array of signer objects
 
 Optional input:
@@ -135,6 +132,18 @@ Parallel signing example:
 ]
 ```
 
+## Command
+
+```bash
+npx tsx scripts/send_envelope.ts send <filePath> <signersJson> [subject]
+```
+
+Example:
+
+```bash
+npx tsx scripts/send_envelope.ts send "/tmp/contract.pdf" '[{"userName":"Bob","userEmail":"bob@example.com"}]'
+```
+
 ## Output
 
 The script returns JSON.
@@ -159,22 +168,6 @@ Failure example:
   "error": "Authentication failed"
 }
 ```
-
-## Network Behavior
-
-This skill communicates only with official eSignGlobal API endpoints to perform:
-- authentication
-- upload URL creation
-- document upload
-- envelope creation
-
-The upload URL is returned by the eSignGlobal API as a secure temporary endpoint.
-The skill does not download external executables or install dependencies at runtime.
-
-## File Access
-
-This skill only accesses the local file explicitly provided by the user via filePath.
-It does not scan directories or read unrelated system files.
 
 ## Security Notes
 
